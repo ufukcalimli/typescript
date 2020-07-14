@@ -43,7 +43,7 @@ let p1: Point = { x: 10, y: 20 };
 
 // interface for a function
 interface Addition{
-    (x: number, y: number): number;
+    (x: number, y: number): number; // takes two number value and returns number value
 }
 
 let add: Addition;
@@ -51,3 +51,14 @@ add = function (first: number, second: number){
     return first + second;
 }
 const total = add(2,3);
+
+//indexable types
+interface StringArray {
+    [index: number]: string;// index is defined as number so that we can reach any item by number of the index
+}
+
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];
+
+let bob: string = myArray[0];
+
